@@ -5,9 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const navLinks = [
-  { label: "Qué Hacemos", href: "#what-we-do" },
+  { label: "Servicios", href: "#what-we-do" },
   { label: "Cómo Funciona", href: "#how-it-works" },
-  { label: "Características", href: "#features" },
   { label: "Precios", href: "#pricing" },
   { label: "Nosotros", href: "#about" },
 ];
@@ -27,24 +26,23 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-[#0a0f1e]/50 backdrop-blur-md transition-all duration-300 ${
         scrolled
-          ? "bg-[#07091a]/90 backdrop-blur-lg border-b border-blue-900/30 shadow-lg"
-          : "bg-transparent"
+          ? "border-b border-transparent"
+          : "border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
           <Image
-            src="/icon.jpg"
-            alt="Storefe logo"
+            src="/icon.png"            
+            alt="StoreVER logo"
             width={36}
             height={36}
-            className="rounded-lg group-hover:shadow-blue-500/40 transition-shadow"
-          />
+            className="rounded-lg bg-transparent group-hover:shadow-blue-500/40 transition-shadow"          />
           <span className="text-white font-bold text-xl tracking-tight">
-            Store<span className="text-blue-400">fe</span>
+            Store<span className="text-blue-400">VER</span>
           </span>
         </a>
 
@@ -95,15 +93,15 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#0d1630]/95 backdrop-blur-lg border-b border-blue-900/30"
+            className="md:hidden bg-[#0a0f1e] border-b border-white/10"
           >
-            <div className="px-6 py-4 flex flex-col gap-4">
+            <div className="px-6 py-4 flex flex-col gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-slate-300 hover:text-blue-400 text-base font-medium transition-colors"
+                  className="text-slate-300 hover:text-blue-400 text-base font-medium transition-colors py-4 border-b border-white/5 last:border-0"
                 >
                   {link.label}
                 </a>

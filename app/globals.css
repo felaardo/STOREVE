@@ -21,10 +21,15 @@
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0f1e;
 }
 
 body {
-  background: #07091a;
+  margin: 0;
+  padding: 0;
+  background: #0a0f1e;
   color: #f1f5f9;
   font-family: var(--font-geist-sans), Arial, sans-serif;
   overflow-x: hidden;
@@ -130,6 +135,23 @@ body::before {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+/* Icon pattern background */
+.bg-pattern {
+  position: relative;
+}
+
+.bg-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/pattern_tile_dark.png');
+  background-repeat: repeat;
+  background-size: 320px 320px;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Section divider */

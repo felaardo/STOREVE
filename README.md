@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# STOREVE
+
+Landing page for **STOREVE** — an AI-powered growth agency that helps local businesses (barbershops, gyms, restaurants, and service businesses) get more clients through high-converting websites and automation systems.
+
+## Tech Stack
+
+- [Next.js 15](https://nextjs.org) — App Router
+- [Tailwind CSS](https://tailwindcss.com) — utility-first styling with custom design tokens
+- [Framer Motion](https://www.framer.com/motion/) — scroll-based and entrance animations
+- TypeScript
+
+## Design System
+
+Custom dark futuristic theme defined in `app/globals.css`:
+
+| Token | Value |
+|---|---|
+| Background | `#07091a` |
+| Navy | `#0d1630` |
+| Blue accent | `#2563eb` |
+| Cyan accent | `#06b6d4` |
+| Foreground | `#f1f5f9` |
+
+Key utility classes: `.glass-card`, `.glass-panel`, `.glass-btn`, `.gradient-text`, `.gradient-text-blue`, `.btn-primary`, `.glow-blue`, `.grid-pattern`.
+
+## Page Sections
+
+| Component | Description |
+|---|---|
+| `Navbar` | Sticky, blur-on-scroll, mobile hamburger menu |
+| `Hero` | Full-screen hero with animated headline and stats bar |
+| `WhatWeDo` | 3-card services overview |
+| `HowItWorks` | Sticky-left + scrolling-right 3-step process |
+| `BusinessTypes` | Bento grid showcasing barbershops, gyms, restaurants, and clinics |
+| `Features` | 6-card feature grid |
+| `Testimonials` | 3 testimonial cards with result badges |
+| `Pricing` | 2-column pricing with setup fee and performance model |
+| `About` | Company mission and values |
+| `FinalCTA` | Email capture form with glass panel |
+| `Footer` | Links, social icons, privacy/terms modals |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/
+│   ├── globals.css       # Design tokens and global utility classes
+│   ├── layout.tsx        # Root layout with font setup
+│   └── page.tsx          # Page composition
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── WhatWeDo.tsx
+│   ├── HowItWorks.tsx
+│   ├── BusinessTypes.tsx
+│   ├── Features.tsx
+│   ├── Testimonials.tsx
+│   ├── Pricing.tsx
+│   ├── About.tsx
+│   ├── FinalCTA.tsx
+│   └── Footer.tsx
+└── public/               # Static assets
+```
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Recommended deployment: [Vercel](https://vercel.com).

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const links = {
@@ -36,9 +35,9 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <a href="#" className="flex items-center gap-2 mb-4">
-              <Image src="/logo.jpg" alt="Storefe logo" width={32} height={32} className="rounded-lg" />
+              <Image src="/icon.png" alt="" width={32} height={32} className="rounded-lg" />
               <span className="text-white font-bold text-xl tracking-tight">
-                Store<span className="text-blue-400">fe</span>
+                Store<span className="text-blue-400">VER</span>
               </span>
             </a>
             <p className="text-slate-500 text-sm leading-relaxed mb-5">
@@ -89,7 +88,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-slate-800/60 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-600 text-sm">
-          <p>© 2026 Storefe. Todos los derechos reservados.</p>
+          <p>© 2026 StoreVER. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <button onClick={() => setShowPrivacy(true)} className="hover:text-slate-400 transition-colors">Política de Privacidad</button>
             <button onClick={() => setShowTerms(true)} className="hover:text-slate-400 transition-colors">Términos de Servicio</button>
@@ -119,7 +118,7 @@ export default function Footer() {
               <h3 className="text-white font-semibold text-base">6. Tus Derechos</h3>
               <p>Tenés derecho a acceder, corregir o eliminar tus datos personales. También podés solicitar una copia de todos los datos que tenemos sobre vos.</p>
               <h3 className="text-white font-semibold text-base">7. Contacto</h3>
-              <p>Para preguntas relacionadas con la privacidad, contactanos en privacidad@storefe.com.</p>
+              <p>Para preguntas relacionadas con la privacidad, contactanos en privacidad@storever.com.</p>
             </div>
           </div>
         </div>
@@ -135,19 +134,19 @@ export default function Footer() {
             <div className="text-slate-400 space-y-4 text-sm">
               <p className="text-slate-300">Última actualización: Abril de 2026</p>
               <h3 className="text-white font-semibold text-base">1. Aceptación de Términos</h3>
-              <p>Al usar los servicios de Storefe, aceptás estos términos. Si no estás de acuerdo, no uses nuestra plataforma.</p>
+              <p>Al usar los servicios de StoreVER, aceptás estos términos. Si no estás de acuerdo, no uses nuestra plataforma.</p>
               <h3 className="text-white font-semibold text-base">2. Descripción del Servicio</h3>
-              <p>Storefe brinda herramientas de creación de sitios web con IA, automatización y crecimiento digital para negocios locales. Las funcionalidades y la disponibilidad están sujetas a cambios.</p>
+              <p>StoreVER brinda herramientas de creación de sitios web con IA, automatización y crecimiento digital para negocios locales. Las funcionalidades y la disponibilidad están sujetas a cambios.</p>
               <h3 className="text-white font-semibold text-base">3. Responsabilidades del Usuario</h3>
               <p>Sos responsable de mantener la seguridad de tu cuenta y de toda la actividad bajo ella. Aceptás proporcionar información comercial precisa.</p>
               <h3 className="text-white font-semibold text-base">4. Propiedad Intelectual</h3>
-              <p>Toda la marca, el software y el contenido de Storefe son propiedad de Storefe. El contenido que creás con nuestras herramientas es tuyo.</p>
+              <p>Toda la marca, el software y el contenido de StoreVER son propiedad de StoreVER. El contenido que creás con nuestras herramientas es tuyo.</p>
               <h3 className="text-white font-semibold text-base">5. Limitación de Responsabilidad</h3>
-              <p>Storefe no es responsable de daños indirectos, incidentales o consecuentes derivados del uso de nuestros servicios. Nuestra responsabilidad total se limita al monto que pagaste en los últimos 12 meses.</p>
+              <p>StoreVER no es responsable de daños indirectos, incidentales o consecuentes derivados del uso de nuestros servicios. Nuestra responsabilidad total se limita al monto que pagaste en los últimos 12 meses.</p>
               <h3 className="text-white font-semibold text-base">6. Terminación</h3>
               <p>Nos reservamos el derecho de suspender o cancelar cuentas que violen estos términos. Podés cancelar tu cuenta en cualquier momento contactando al soporte.</p>
               <h3 className="text-white font-semibold text-base">7. Ley Aplicable</h3>
-              <p>Estos términos se rigen por las leyes de la jurisdicción en la que opera Storefe. Cualquier disputa se resolverá mediante arbitraje vinculante.</p>
+              <p>Estos términos se rigen por las leyes de la jurisdicción en la que opera StoreVER. Cualquier disputa se resolverá mediante arbitraje vinculante.</p>
             </div>
           </div>
         </div>

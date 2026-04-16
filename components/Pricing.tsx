@@ -2,160 +2,143 @@
 
 import { motion } from "framer-motion";
 
-const included = [
-  "Sitio web personalizado de alta conversión",
-  "Diseño optimizado para móvil",
-  "Optimización de Google Business",
-  "Seguimiento de leads con IA",
-  "Sistema de reservas/contacto online",
-  "Automatización de reseñas",
-  "Configuración de SEO local",
-  "Reporte mensual de resultados",
-  "Soporte continuo y actualizaciones",
+const plans = [
+  {
+    name: "Sitio Web",
+    icon: (
+      <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+    description:
+      "Landing page o sitio multipágina. Diseño profesional, responsive, optimizado para móvil. Entrega en 7 días.",
+    features: [
+      "Diseño personalizado",
+      "Responsive y rápido",
+      "Optimizado para móvil",
+      "Formulario de contacto",
+      "Entrega en 7 días",
+    ],
+    recommended: false,
+  },
+  {
+    name: "Sitio Web + Chatbot IA",
+    icon: (
+      <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+      </svg>
+    ),
+    description:
+      "Todo lo anterior más un asistente virtual con IA integrado a tu web y WhatsApp. Responde consultas y agenda turnos solo.",
+    features: [
+      "Todo lo del plan Sitio Web",
+      "Chatbot con IA personalizado",
+      "Integración con WhatsApp",
+      "Responde consultas automáticamente",
+      "Agenda turnos 24/7",
+    ],
+    recommended: true,
+  },
+  {
+    name: "Chatbot IA",
+    icon: (
+      <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+      </svg>
+    ),
+    description:
+      "Asistente virtual con IA para tu WhatsApp o sitio web existente. Responde consultas, agenda turnos y atiende clientes en automático.",
+    features: [
+      "Chatbot con IA personalizado",
+      "Integración con WhatsApp",
+      "Responde consultas 24/7",
+      "Agenda turnos automáticamente",
+      "Entrenado con info de tu negocio",
+    ],
+    recommended: false,
+  },
 ];
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 px-6 relative">
-      <div className="section-divider mb-24" />
-
-      <div className="max-w-5xl mx-auto">
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <p className="text-blue-400 text-sm font-semibold uppercase tracking-widest mb-4">
-            Precios
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-5">
-            Simple, transparente,{" "}
-            <span className="gradient-text">orientado a resultados</span>
-          </h2>
-          <p className="text-slate-400 text-lg max-w-xl mx-auto">
-            No te cobramos por parecer ocupados. Nuestro modelo está construido en torno
-            a tus resultados reales — solo ganamos cuando vos ganás.
-          </p>
-        </motion.div>
-
-        {/* Model cards */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Setup */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="glass-card rounded-3xl p-8"
-          >
-            <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
-              </svg>
-            </div>
-
-            <div className="mb-2">
-              <span className="text-xs text-slate-500 uppercase tracking-widest">Único pago</span>
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Tarifa de Configuración</h3>
-            <p className="text-slate-400 leading-relaxed mb-6">
-              Una inversión única para construir tu sistema de crecimiento completo — sitio web, automatizaciones, configuración SEO y todo lo demás. Todo lo que construimos es tuyo.
-            </p>
-
-            <div className="text-4xl font-black text-white mb-1">
-              Desde <span className="gradient-text">$249</span>
-            </div>
-            <p className="text-slate-600 text-sm mb-8">El precio exacto depende del alcance. Siempre se habla antes de empezar.</p>
-
-            <div className="space-y-3">
-              {included.slice(0, 5).map((item, i) => (
-                <div key={i} className="flex items-center gap-3 text-slate-300 text-sm">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                  </svg>
-                  {item}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Performance */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative glass-card rounded-3xl p-8 border border-blue-500/30 overflow-hidden md:scale-105 shadow-[0_0_50px_rgba(37,99,235,0.15)]"
-          >
-            {/* Popular badge */}
-            <div className="absolute top-0 right-8 -translate-y-1/2">
-              <span className="px-3 py-1 rounded-full bg-gradient-to-r from-blue-600 to-cyan-400 text-white text-xs font-bold uppercase tracking-wide">
-                Recomendado
-              </span>
-            </div>
-
-            {/* Glow */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/20 rounded-full blur-2xl pointer-events-none" />
-
-            <div className="w-12 h-12 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-6">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-              </svg>
-            </div>
-
-            <div className="mb-2">
-              <span className="text-xs text-blue-400 uppercase tracking-widest">Configuración + Mensual</span>
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Configuración + Rendimiento</h3>
-            <p className="text-slate-400 leading-relaxed mb-6">
-              Nuestro modelo insignia. Tarifa de configuración reducida más una mensualidad atada a tus resultados. Seguimos comprometidos con tu crecimiento, no solo con el lanzamiento.
-            </p>
-
-            <div className="text-4xl font-black text-white mb-1">
-              Desde <span className="gradient-text">$99</span>
-              <span className="text-2xl text-slate-500 font-normal"> configuración</span>
-            </div>
-            <p className="text-slate-600 text-sm mb-8">+ mensual según los resultados obtenidos</p>
-
-            <div className="space-y-3">
-              {included.map((item, i) => (
-                <div key={i} className="flex items-center gap-3 text-slate-300 text-sm">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                  </svg>
-                  {item}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Guarantee */}
+    <section id="precios" className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-10 glass-card rounded-2xl p-6 flex flex-col md:flex-row items-center gap-5 border border-blue-500/20"
+          className="text-center mb-16"
         >
-          <div className="w-14 h-14 rounded-xl bg-blue-600/10 flex items-center justify-center flex-shrink-0">
-            <svg className="w-7 h-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-            </svg>
-          </div>
-          <div>
-            <h4 className="text-white font-semibold mb-1">Sin Cargos Sorpresa. Nunca.</h4>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Todo se habla y se acuerda antes de empezar. Sin cargos ocultos, sin contratos de los que no podés salir. Si no entregamos resultados, no te cobramos el mes siguiente.
-            </p>
-          </div>
-          <a href="#contact" className="flex-shrink-0 btn-primary text-white text-sm font-semibold px-6 py-3 rounded-xl whitespace-nowrap">
-            Pedir Cotización
-          </a>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Precios
+          </h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">
+            Elegí el plan que mejor se ajuste a tu negocio.
+          </p>
         </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {plans.map((plan, index) => (
+            <motion.div
+              key={plan.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className={`relative rounded-2xl p-8 flex flex-col border ${
+                plan.recommended
+                  ? "border-blue-500/50 bg-blue-950/0"
+                  : "border-white/5 bg-white/4"
+              }`}
+            >
+              {plan.recommended && (
+                <div className="absolute -top-3 right-6 bg-blue-500 text-white text-xs font-bold px-4 py-1 rounded-full">
+                  RECOMENDADO
+                </div>
+              )}
+
+              <div className="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6">
+                {plan.icon}
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-3">{plan.name}</h3>
+              <p className="text-slate-400 text-sm mb-6">{plan.description}</p>
+
+              <div className="space-y-3 mb-8 flex-grow">
+                {plan.features.map((feature) => (
+                  <div key={feature} className="flex items-center gap-3">
+                    <svg
+                      className="w-5 h-5 text-blue-400 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="text-slate-300 text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="https://wa.me/5491112345678"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-full py-3 rounded-lg text-center font-semibold transition-colors ${
+                  plan.recommended
+                    ? "bg-blue-500 text-white hover:bg-blue-600"
+                    : "bg-blue-500 text-white hover:bg-blue-600"
+                }`}
+              >
+                Consultar precio
+              </a>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

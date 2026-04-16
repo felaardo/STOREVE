@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     quote:
-      "Antes de Storefe, dependía 100% del boca a boca. Ahora recibo entre 8 y 12 nuevas solicitudes de reserva por semana solo a través de mi sitio web. El sistema de seguimiento con IA es increíble — responde a los leads más rápido de lo que yo podría.",
+      "Antes de StoreVER, dependía 100% del boca a boca. Ahora recibo entre 8 y 12 nuevas solicitudes de reserva por semana solo a través de mi sitio web. El sistema de seguimiento con IA es increíble — responde a los leads más rápido de lo que yo podría.",
     name: "Marcos T.",
     role: "Dueño, Studio M Barbería",
     location: "Buenos Aires, AR",
@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     quote:
-      "El gimnasio tenía un sitio web, pero no hacía nada. Storefe lo reconstruyó todo y armó un embudo automatizado — ahora promediamos 23 pruebas de nuevos socios por mes contra 6 antes. Se paga solo y con creces.",
+      "El gimnasio tenía un sitio web, pero no hacía nada. StoreVER lo reconstruyó todo y armó un embudo automatizado — ahora promediamos 23 pruebas de nuevos socios por mes contra 6 antes. Se paga solo y con creces.",
     name: "Sofía R.",
     role: "Co-Fundadora, IronForm Fitness",
     location: "Córdoba, AR",
@@ -25,7 +25,7 @@ const testimonials = [
   },
   {
     quote:
-      "Al principio era escéptico — me habían fallado agencias de marketing antes. Pero Storefe cumplió en el primer mes. Más reservas, mejor posición en Google y casi no tuve que hacer nada. Eso era exactamente lo que necesitaba.",
+      "Al principio era escéptico — me habían fallado agencias de marketing antes. Pero StoreVER cumplió en el primer mes. Más reservas, mejor posición en Google y casi no tuve que hacer nada. Eso era exactamente lo que necesitaba.",
     name: "David L.",
     role: "Dueño, Maison Léa Restaurante",
     location: "Rosario, AR",

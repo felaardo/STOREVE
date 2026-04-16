@@ -4,22 +4,22 @@ import { motion } from "framer-motion";
 
 const values = [
   {
-    title: "Resultados, no informes",
-    description: "Medimos nuestro éxito por el crecimiento de tus ingresos — no por métricas de vanidad o presentaciones bonitas.",
+    title: "Entrega en 7 días",
+    description: "Sin demoras ni excusas. Tu sitio web listo y funcionando en una semana desde que arrancamos.",
   },
   {
-    title: "Asociaciones honestas",
-    description: "Solo tomamos clientes a los que sabemos que podemos ayudar. Si no somos la opción correcta, te lo decimos de frente.",
+    title: "Todo tuyo",
+    description: "El código, el dominio, el chatbot — todo lo que construimos te pertenece. Sin ataduras.",
   },
   {
-    title: "Construido para durar",
-    description: "Cada sistema que construimos es tuyo para siempre. Sin dependencia de proveedores. Sin situaciones de rehén.",
+    title: "Soporte real",
+    description: "Te acompañamos después del lanzamiento. Si algo no funciona, lo resolvemos.",
   },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 relative">
+    <section id="about" className="py-12 md:py-24 px-4 md:px-6 relative">
       <div className="section-divider mb-24" />
 
       {/* Background */}
@@ -37,26 +37,25 @@ export default function About() {
             transition={{ duration: 0.7 }}
           >
             <p className="text-blue-400 text-sm font-semibold uppercase tracking-widest mb-4">
-              Sobre Storefe
+              Sobre StoreVER
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Creamos Storefe porque{" "}
-              <span className="gradient-text">los negocios locales merecen más</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              Creamos StoreVER para{" "}
+              <span className="gradient-text">simplificar la presencia digital</span>
             </h2>
-            <p className="text-slate-400 leading-relaxed mb-5 text-lg">
-              La mayoría de las agencias digitales se preocupan por los retainers,
-              no por los resultados. Construyen sitios que quedan bien en un portfolio
-              pero no mueven la aguja para el dueño del negocio.
+            <p className="text-slate-400 leading-relaxed mb-5 text-sm md:text-lg">
+              Muchos negocios no tienen tiempo ni conocimientos técnicos para
+              construir su presencia online. Contratan agencias caras que tardan
+              meses y entregan poco.
             </p>
-            <p className="text-slate-400 leading-relaxed mb-5">
-              Storefe nació para cambiar eso. Nos enfocamos exclusivamente en negocios
-              locales — las barberías, gimnasios, restaurantes y prestadores de servicios
-              que son el motor de sus comunidades. Les llevamos la misma calidad de
-              infraestructura digital que las grandes marcas dan por sentada.
+            <p className="text-slate-400 leading-relaxed mb-5 text-sm md:text-base">
+              StoreVER nació para cambiar eso. Hacemos dos cosas bien: sitios web
+              profesionales en 7 días y chatbots con IA que atienden a tus clientes
+              en automático. Sin complejidad, sin demoras.
             </p>
-            <p className="text-slate-400 leading-relaxed">
-              No solo construimos sitios web. Construimos motores de crecimiento — y
-              atamos nuestro éxito directamente al tuyo.
+            <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+              Trabajamos con startups, emprendedores y negocios que quieren
+              crecer sin depender de equipos técnicos grandes.
             </p>
           </motion.div>
 
@@ -100,7 +99,7 @@ export default function About() {
                 a las herramientas y sistemas que antes estaban reservados para las grandes
                 corporaciones.&quot;
               </p>
-              <p className="text-slate-600 text-xs mt-2">— Equipo Storefe</p>
+              <p className="text-slate-600 text-xs mt-2">— Equipo StoreVER</p>
             </motion.div>
           </motion.div>
         </div>

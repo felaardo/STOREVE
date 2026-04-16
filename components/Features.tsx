@@ -71,7 +71,7 @@ const itemVariants: Variants = {
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 px-6 relative">
+    <section id="features" className="py-12 md:py-24 px-4 md:px-6 relative">
       <div className="section-divider mb-24" />
 
       {/* Background decoration */}

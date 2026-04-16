@@ -63,7 +63,7 @@ const bentoItems = [
 
 export default function BusinessTypes() {
   return (
-    <section id="businesses" className="py-24 px-6 relative">
+    <section id="businesses" className="py-12 md:py-24 px-4 md:px-6 relative">
       <div className="section-divider mb-24" />
 
       <div className="max-w-6xl mx-auto">
@@ -95,7 +95,7 @@ export default function BusinessTypes() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-4"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4"
         >
           {/* Large card: Barbershop */}
           <div className="md:col-span-2 glass-card rounded-3xl overflow-hidden relative group flex flex-col justify-end min-h-[300px] cursor-default">
@@ -105,10 +105,11 @@ export default function BusinessTypes() {
                   className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-500 mix-blend-luminosity"
                   style={{ backgroundImage: `url(${bentoItems[0].image})` }}
                 />
+                <div className="absolute inset-0 bg-black/60 md:bg-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#07091a] via-[#07091a]/80 to-transparent" />
               </>
             )}
-            <div className="relative z-10 p-8">
+            <div className="relative z-10 p-4 md:p-8">
               <div className="w-12 h-12 glass-panel rounded-full flex items-center justify-center mb-4 text-cyan-400">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d={bentoItems[0].iconPath} />
@@ -117,7 +118,7 @@ export default function BusinessTypes() {
               <h3 className="text-2xl font-bold text-white mb-2">{bentoItems[0].label}</h3>
               <p className="text-slate-300 max-w-md">{bentoItems[0].description}</p>
               <div className="flex items-baseline gap-2 mt-4">
-                <span className="text-2xl font-black gradient-text">{bentoItems[0].stat}</span>
+                <span className="text-lg md:text-2xl font-black gradient-text">{bentoItems[0].stat}</span>
                 <span className="text-slate-500 text-sm">{bentoItems[0].statLabel}</span>
               </div>
             </div>
@@ -129,15 +130,16 @@ export default function BusinessTypes() {
               className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity"
               style={{ backgroundImage: `url(${bentoItems[1].image})` }}
             />
+            <div className="absolute inset-0 bg-black/60 md:bg-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#07091a] to-[#07091a]/40" />
-            <div className="relative z-10 p-6">
+            <div className="relative z-10 p-4 md:p-6">
               <svg className="w-8 h-8 text-blue-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d={bentoItems[1].iconPath} />
               </svg>
               <h3 className="text-xl font-bold text-white mb-1">{bentoItems[1].label}</h3>
               <p className="text-sm text-slate-300">{bentoItems[1].description}</p>
               <div className="flex items-baseline gap-2 mt-3">
-                <span className="text-xl font-black gradient-text">{bentoItems[1].stat}</span>
+                <span className="text-lg md:text-xl font-black gradient-text">{bentoItems[1].stat}</span>
                 <span className="text-slate-500 text-xs">{bentoItems[1].statLabel}</span>
               </div>
             </div>
@@ -149,15 +151,16 @@ export default function BusinessTypes() {
               className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity"
               style={{ backgroundImage: `url(${bentoItems[2].image})` }}
             />
+            <div className="absolute inset-0 bg-black/60 md:bg-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#07091a] to-[#07091a]/40" />
-            <div className="relative z-10 p-6">
+            <div className="relative z-10 p-4 md:p-6">
               <svg className="w-8 h-8 text-cyan-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d={bentoItems[2].iconPath} />
               </svg>
               <h3 className="text-xl font-bold text-white mb-1">{bentoItems[2].label}</h3>
               <p className="text-sm text-slate-300">{bentoItems[2].description}</p>
               <div className="flex items-baseline gap-2 mt-3">
-                <span className="text-xl font-black gradient-text">{bentoItems[2].stat}</span>
+                <span className="text-lg md:text-xl font-black gradient-text">{bentoItems[2].stat}</span>
                 <span className="text-slate-500 text-xs">{bentoItems[2].statLabel}</span>
               </div>
             </div>
@@ -171,7 +174,7 @@ export default function BusinessTypes() {
                 <h3 className="text-2xl font-bold text-white mb-2">{bentoItems[3].label}</h3>
                 <p className="text-slate-300">{bentoItems[3].description}</p>
                 <div className="flex items-baseline gap-2 mt-4">
-                  <span className="text-2xl font-black gradient-text">{bentoItems[3].stat}</span>
+                  <span className="text-lg md:text-2xl font-black gradient-text">{bentoItems[3].stat}</span>
                   <span className="text-slate-500 text-sm">{bentoItems[3].statLabel}</span>
                 </div>
               </div>
